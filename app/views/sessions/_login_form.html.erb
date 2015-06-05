@@ -1,0 +1,17 @@
+<%= display_messages %>
+
+<form class="form-signin" action="<%= session_url %>" method="POST">
+  <h2 class="form-signin-heading"><%= action %></h2>
+  <%= render_auth_token %>
+
+  <label>Email:
+    <input type="text" name="user[email]" value="<%= user.email %>">
+  </label>
+
+  <label>Password:
+    <input type="password" name="user[password]">
+  </label>
+
+  <input type="submit" value="<%= action %>">
+
+</form>
